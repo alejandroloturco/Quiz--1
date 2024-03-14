@@ -104,3 +104,21 @@ class ImplanteDental(Implantes):
     self.__forma = f
   def asignarFijacion_s(self, f):
     self.__fijacion_s = f
+
+class ImplanteRodilla(Implantes):
+
+  def __init__(self, material, fijacion_t, tamaño,medico,estado):
+    super().__init__(material, tamaño, medico, estado, None)
+    self.__fijacion_t = fijacion_t
+
+  def verFijacion_t(self):
+    return self.__fijacion_t
+    
+  def asignarFijacion_t(self, f):
+    self.__fijacion_t = f
+
+
+class ImplanteCadera(ImplanteRodilla):
+
+  def __init__(self, material, fijacion_t, tamaño,medico,estado):
+    super().__init__(material, fijacion_t, tamaño,medico,estado)
