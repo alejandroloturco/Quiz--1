@@ -70,3 +70,20 @@ class Marcapasos(Implantes):
     self.__conectividad = c
   def asignarFrecuencia(self, f):
     self.__frecuencia = f
+
+class StendCoronario(Implantes):
+
+  def __init__(self, material, longitud, diametro,medico,estado,):
+    super().__init__(material,None,medico,estado,None)
+    self.__longitud = longitud
+    self.__diametro = diametro
+
+  def verLongitud(self):
+    return self.__longitud
+  def verDiametro(self):
+    return self.__diametro
+
+  def asignarLongitud(self, l):
+    self.__longitud = l
+  def asignarDiametro(self, d):
+    self.__diametro = d
