@@ -48,3 +48,25 @@ class Implantes:
 
   def asignarMantenimiento(self,m):
     self.__mantenimiento = m
+
+class Marcapasos(Implantes):
+
+  def __init__(self, electrodos, conectividad, frecuencia, medico, estado):
+    super().__init__(None, None, medico, estado,None)
+    self.__electrodos = electrodos
+    self.__conectividad = conectividad
+    self.__frecuencia = frecuencia
+
+  def verElectrodos(self):
+    return self.__electrodos
+  def verConectividad(self):
+    return self.__conectividad
+  def verFrecuencia(self):
+    return self.__frecuencia
+
+  def asignarElectrodos(self, e):
+    self.__electrodos = e
+  def asignarConectividad(self, c):
+    self.__conectividad = c
+  def asignarFrecuencia(self, f):
+    self.__frecuencia = f
