@@ -612,50 +612,126 @@ def main():
                         continue
                     
             elif opcion == 5:
-              selec = int(
-              input("""Tipo de Implante:
-                                \r1. Marcapasos 
-                                \r2. Stend Coronario
-                                \r3. Implante Dental
-                                \r4. Implante Rodilla
-                                \r5. Implante Cadera
-                    \rIngrese una opcion:"""))
-            if selec == 1:
-              for mar in inventario[patient]:
-                if isinstance(mar, Marcapasos):
-                  sis2 = mar.verRevision()
-                  fecha_revision = (f'{datetime.datetime.now().strftime("%d/%m/%Y")}')
-                  mantenimiento = input("Ingrese la revision realizada al implante: ")
-                  mar.asignarRevision(sis2,fecha_revision,mantenimiento)
-            elif selec == 2:
-              for ste in inventario[patient]:
-                if isinstance(ste, StendCoronario):
-                  sis2 = ste.verRevision()
-                  ste.verRevision()
-                  fecha_revision = datetime.datetime.now().strftime("%d/%m/%Y")
-                  mantenimiento = input("Ingrese la revision realizada al implante: ")
-                  ste.asignarRevision(sis2,fecha_revision,mantenimiento)
-            elif selec == 3:
-              for impd in inventario[patient]:
-                if isinstance(impd, ImplanteDental):
-                  sis2 = impd.verRevision()
-                  impd.verRevision()
-                  fecha_revision = datetime.datetime.now().strftime("%d/%m/%Y")
-                  mantenimiento = input("Ingrese la revision realizada al impdlante: ")
-                  impd.asignarRevision(sis2,fecha_revision,mantenimiento)
-            elif selec == 4:
-              for impr in inventario[patient]:
-                if isinstance(impr, ImplanteRodilla):
-                  sis2 = impr.verRevision()
-                  impr.verRevision()
-                  fecha_revision = datetime.datetime.now().strftime("%d/%m/%Y")
-                  mantenimiento = input("Ingrese la revision realizada al implante: ")
-                  impr.asignarRevision(sis2,fecha_revision,mantenimiento)
-            elif selec == 5:
-              for ic in inventario[patient]:
-                if isinstance(ic, ImplanteCadera):
-                  sis2 = ic.verRevision()
-                  ic.verRevision()
-                  fecha_revision = datetime.datetime.now().strftime("%d/%m/%Y")
-                  mantenimiento = input("Ingrese la revision realizada al implante: ")
-                  ic.asignarRevision(sis2,fecha_revision,mantenimiento)
+                selec = int(
+                input("""Tipo de Implante:
+                                    \r1. Marcapasos 
+                                    \r2. Stend Coronario
+                                    \r3. Implante Dental
+                                    \r4. Implante Rodilla
+                                    \r5. Implante Cadera
+                        \rIngrese una opcion:"""))
+                if selec == 1:
+                    for mar in inventario[patient]:
+                        if isinstance(mar, Marcapasos):
+                            sis2 = mar.verRevision()
+                            fecha_revision = (f'{datetime.datetime.now().strftime("%d/%m/%Y")}')
+                            mantenimiento = input("Ingrese la revision realizada al implante: ")
+                            mar.asignarRevision(sis2,fecha_revision,mantenimiento)
+                elif selec == 2:
+                    for ste in inventario[patient]:
+                        if isinstance(ste, StendCoronario):
+                            sis2 = ste.verRevision()
+                            ste.verRevision()
+                            fecha_revision = datetime.datetime.now().strftime("%d/%m/%Y")
+                            mantenimiento = input("Ingrese la revision realizada al implante: ")
+                            ste.asignarRevision(sis2,fecha_revision,mantenimiento)
+                elif selec == 3:
+                    for impd in inventario[patient]:
+                        if isinstance(impd, ImplanteDental):
+                            sis2 = impd.verRevision()
+                            impd.verRevision()
+                            fecha_revision = datetime.datetime.now().strftime("%d/%m/%Y")
+                            mantenimiento = input("Ingrese la revision realizada al impdlante: ")
+                            impd.asignarRevision(sis2,fecha_revision,mantenimiento)
+                elif selec == 4:
+                    for impr in inventario[patient]:
+                        if isinstance(impr, ImplanteRodilla):
+                            sis2 = impr.verRevision()
+                            impr.verRevision()
+                            fecha_revision = datetime.datetime.now().strftime("%d/%m/%Y")
+                            mantenimiento = input("Ingrese la revision realizada al implante: ")
+                            impr.asignarRevision(sis2,fecha_revision,mantenimiento)
+                elif selec == 5:
+                    for ic in inventario[patient]:
+                        if isinstance(ic, ImplanteCadera):
+                            sis2 = ic.verRevision()
+                            ic.verRevision()
+                            fecha_revision = datetime.datetime.now().strftime("%d/%m/%Y")
+                            mantenimiento = input("Ingrese la revision realizada al implante: ")
+                            ic.asignarRevision(sis2,fecha_revision,mantenimiento)
+
+            elif opcion == 6:
+                while True:
+                    print("""Protesis
+                        \r1. Marcapasos 
+                        \r2. Stend Coronario
+                        \r3. Implante Dental
+                        \r4. Implante Rodilla
+                        \r5. Implante Cadera""")
+                    s_opcion = input("Seleccione la opcion deseada: ")
+                    if s_opcion == 1:
+                        for mar in inventario[patient]:
+                            if isinstance(mar, Marcapasos):
+                                mantenimiento = input("Ingrese mantenimiento: ")
+                                mar.asignarMantenimiento(mantenimiento)
+                                subopcion = int(input("""Desea realizar otro mantenimiento
+                                                        \r1. Si 
+                                                        \r2. No 
+                                                        \rIngrese su opcion: """))
+                                if subopcion == 1:
+                                    continue
+                                elif subopcion == 2 :
+                                    break
+                    elif s_opcion == 2:
+                        for ste in inventario[patient]:
+                            if isinstance(ste, StendCoronario):
+                                mantenimiento = input("Ingrese mantenimiento: ")
+                                ste.asignarMantenimiento(mantenimiento)
+                                subopcion = int(input("""Desea realizar otro mantenimiento
+                                                        \r1. Si 
+                                                        \r2. No 
+                                                        \rIngrese su opcion: """))
+                                if subopcion == 1:
+                                    continue
+                                elif subopcion == 2 :
+                                    break
+
+                    elif s_opcion == 3:
+                        for i_d in inventario[patient]:
+                            if isinstance(i_d, ImplanteDental):
+                                mantenimiento = input("Ingrese mantenimiento: ")
+                                i_d.asignarMantenimiento(mantenimiento)
+                                subopcion = int(input("""Desea realizar otro mantenimiento
+                                                        \r1. Si 
+                                                        \r2. No 
+                                                        \rIngrese su opcion: """))
+                                if subopcion == 1:
+                                    continue
+                                elif subopcion == 2 :
+                                    break
+                    elif s_opcion == 4:
+                        for i_r in inventario[patient]:
+                            if isinstance(i_r, ImplanteRodilla):
+                                mantenimiento = input("Ingrese mantenimiento: ")
+                                i_r.asignarMantenimiento(mantenimiento)
+                                subopcion = int(input("""Desea realizar otro mantenimiento
+                                                        \r1. Si 
+                                                        \r2. No 
+                                                        \rIngrese su opcion: """))
+                                if subopcion == 1:
+                                    continue
+                                elif subopcion == 2 :
+                                    break
+                    elif s_opcion == 5:
+                        for i_c in inventario[patient]:
+                            if isinstance(i_c, ImplanteCadera):
+                                mantenimiento = input("Ingrese mantenimiento: ")
+                                i_c.asignarMantenimiento(mantenimiento)
+                                subopcion = int(input("""Desea realizar otro mantenimiento
+                                                        \r1. Si 
+                                                        \r2. No 
+                                                        \rIngrese su opcion: """))
+                                if subopcion == 1:
+                                    continue
+                                elif subopcion == 2 :
+                                    break    
