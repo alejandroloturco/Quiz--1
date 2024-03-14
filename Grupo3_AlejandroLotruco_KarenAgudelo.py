@@ -137,3 +137,39 @@ class Paciente():
     self.__nombre = n
   def asignarCedula(self, c):
     self.__cedula = c
+
+class Sistema:
+
+  def __init__(self):
+    self.__inventario = {}
+
+  def verInventario(self):
+    return self.__inventario
+  def verificarPaciente(self, paciente):
+    if paciente in self.__inventario:
+      return True
+    return False 
+
+  def ingresarPaciente(self, paciente):
+    if self.verificarPaciente(paciente):
+      print("El paciente ya existe")
+    else:
+      self.__inventario[paciente] = []
+
+  def agregarImplantes(self, paciente, implantes):
+    if self.verificarPaciente(paciente):
+      self.__inventario[paciente].append(implantes)
+      print("Implante asignado al paciente correctamente\n")
+    else:
+      print("El paciente no existe\n")
+
+  def eliminarImplantes(self, paciente, implantes):
+    if self.verificarPaciente(paciente):
+      self.__inventario[paciente].remove(implantes)
+    else:
+      print("El paciente no existe\n")
+
+  def verificarImplante(self,object,tipo):
+      if isinstance(object,tipo):
+        return False
+      return True
