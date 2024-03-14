@@ -195,8 +195,8 @@ def main():
       inventario = sis.verInventario()
       for patient in sis.verInventario().keys():        
         if patient.verNombre().lower() == name.lower() and patient.verCedula() == int(doc):
-          opcion = int(
-              input("""Escoja una opcion 
+            opcion = int(
+                input("""Escoja una opcion 
                                         \r1. Agregar nuevos implantes 
                                         \r2. Eliminar implantes
                                         \r3. Editar informacion de implantes 
@@ -204,4 +204,14 @@ def main():
                                         \r5. Revision
                                         \r6. Mantenimiento
                                         \r7. Salir
-                                        \rIngrese--> """))
+                                        \rIngrese--> """))            
+            if opcion == 1:
+                while True:
+                    print("""Protesis
+                                    \r1. Marcapasos 
+                                    \r2. Stend Coronario
+                                    \r3. Implante Dental
+                                    \r4. Implante Rodilla
+                                    \r5. Implante Cadera""")
+                    opcion_f = int(input("Seleccione el tipo de protesis que desea agregar: "))
+
