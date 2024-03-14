@@ -734,4 +734,15 @@ def main():
                                 if subopcion == 1:
                                     continue
                                 elif subopcion == 2 :
-                                    break    
+                                    break 
+            elif opcion == 7:
+              print("Ha salido del sistema")
+              break
+
+            else:
+              print("Opcion no valida, ingrese de nuevo")
+              continue
+
+    else:
+      print("Opcion no valida, ingrese de nuevo")
+      continue
