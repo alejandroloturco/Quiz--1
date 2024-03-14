@@ -173,3 +173,18 @@ class Sistema:
       if isinstance(object,tipo):
         return False
       return True
+  
+def main():
+  sis = Sistema()
+  while True:
+    menu = int(
+        input("""Escoja una opcion 
+                            \r1. Ingresar Paciente
+                            \r2. Modificar Informacion para un paciente
+                            \rIngrese--> """))
+    if menu == 1:
+      nombre = input("ingrese nombre del paciente: ").lower()
+      cc = int(input("ingrese la cedula del paciente: "))
+      pac_new = Paciente(nombre, cc)
+      sis.ingresarPaciente(pac_new)
+      print(" Paciente Ingresado\n")
