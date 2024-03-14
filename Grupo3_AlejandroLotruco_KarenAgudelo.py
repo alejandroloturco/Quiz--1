@@ -388,3 +388,167 @@ def main():
                         print("Ingrese una opcion valida")
                         break
 
+             elif opcion == 3:
+            print("""Tipo de Implante:
+                                \r1. Marcapasos 
+                                \r2. Stend Coronario
+                                \r3. Implante Denal
+                                \r4. Implante Rodilla
+                                \r5. Implante Cadera""")
+            s_opcion = int(input("Seleccione el implante a editar:"))
+            if s_opcion == 1:
+              for stend in inventario[patient]:
+                if isinstance(stend, StendCoronario):
+                  print("""Seleccione la informacion de a editar:
+                                  \r1. Electrodos
+                                  \r2. Conectividad    
+                                  \r3. Frecuencia
+                                  \r4. Medico
+                                  \r5. Estado
+                                  """)
+                  op_m = int(input("Seleccione la opcion: "))
+                  if op_m == 1:
+                    mar.asignarElectrodos(input("Ingrese la cantidad de electrodos: "))
+                    print("Caracteristica editada")
+                    break
+                  elif op_m == 2:
+                    mar.asignarConectividad(input("Ingrese la conectividad: "))
+                    print("Caracteristica editada")
+                    break
+                  elif op_m == 3:
+                    mar.asignarFrecuencia(input("Ingrese la frecuencia: "))
+                    print("Caracteristica editada")
+                  elif op_m == 4:
+                    mar.asignarMedico(input("Ingrese el medico: "))
+                    print("Caracteristica editada")
+                    break
+                  elif op_m == 5:
+                    mar.asignarEstado(input("Ingrese el estado: ")) 
+                    print("Caracteristica editada")
+                    break
+                  else:
+                    print("Ingrese una opcion valida")
+                    break               
+
+            elif s_opcion == 2:
+              for stend in inventario[patient]:
+                if isinstance(stend, StendCoronario):
+                  print("""informacion a editar:
+                                  \r1. Longitud
+                                  \r2. Diametro    
+                                  \r3. Material
+                                  \r4. Medico
+                                  \r5. Estado
+                                  """)
+                  op_s = int(input("Seleccione la opcion:"))
+                  if op_s == 1:
+                    stend.asignarLongitud(int(input("Ingrese la longitud:")))
+                    break
+                  elif op_s == 2:
+                    stend.asignarDiametro(int(input("Ingrese el diametro: ")))
+                    break
+                  elif op_s == 3:
+                    stend.asignarMaterial(input("Ingrese el material:"))
+                    break
+                  elif op_m == 4:
+                    stend.asignarMedico(input("Ingrese el medico: "))
+                    break
+                  elif op_m == 5:
+                    stend.asignarEstado(input("Ingrese el estado: ")) 
+                    break
+                  else:
+                    print("Ingrese una opcion valida")
+                    break
+
+            elif s_opcion == 3:
+              for i_d in inventario[patient]:
+                if isinstance(i_d, ImplanteDental):
+                  print("""Informacion a editar:
+                                  \r1. Forma
+                                  \r2. Sistema de fijacion    
+                                  \r3. Material
+                                  \r4. Medico
+                                  \r5. Estado
+                                  """)
+                  op_id = int(input("Seleccione la opcion:"))
+                  if op_id == 1:
+                    i_d.asignarForma(input("Ingrese la forma:"))
+                    break
+                  elif op_id == 2:
+                    i_d.asignarFijacion_s(
+                        input("Ingrese el sistema de fijacion: "))
+                    break
+                  elif op_id == 3:
+                    i_d.asignarMaterial(input("Ingrese el material:"))
+                    break
+                  elif op_m == 4:
+                    i_d.asignarMedico(input("Ingrese el medico: "))
+                    break
+                  elif op_m == 5:
+                    i_d.asignarEstado(input("Ingrese el estado: ")) 
+                    break
+                  else:
+                    input("Ingrese una opcion valida")
+                    break
+
+            elif s_opcion == 4:
+              for i_r in inventario[patient]:
+                if isinstance(i_r, ImplanteRodilla):
+                  print("""Informacion a editar:
+                                    \r1. Material
+                                    \r2. Tipo de fijacion  
+                                    \r3. Tamaño
+                                    \r4. Medico
+                                    \r5. Estado
+                                    """)
+                  op_ir = int(input("Seleccione la opcion:"))
+                  if op_ir == 1:
+                    i_r.asignarMaterial(input("Ingrese el material:"))
+                    break
+                  elif op_ir == 2:
+                    i_r.asignarFijacion_t(
+                        input("Ingrese el tipo de fijacion: "))
+                    break
+                  elif op_ir == 3:
+                    i_r.asignarTamaño(int(input("Ingrese el tamaño:")))
+                    break
+                  elif op_m == 4:
+                    i_r.asignarMedico(input("Ingrese el medico: "))
+                    break
+                  elif op_m == 5:
+                    i_r.asignarEstado(input("Ingrese el estado: ")) 
+                    break
+                  else:
+                    print("Ingrese una opcion valida")
+                    break
+
+            elif s_opcion == 5:
+              for i_c in inventario[patient]:
+                if isinstance(i_c, ImplanteCadera):
+                  print("""Informacion a editar:
+                                  \r1. Material
+                                  \r2. Tipo de fijacion  
+                                  \r3. Tamaño
+                                  \r4. Medico
+                                  \r5. Estado
+                                  """)
+                  op_ic = int(input("Seleccione la opcion:"))
+                  if op_ic == 1:
+                    i_c.asignarMaterial(input("Ingrese el material:"))
+                    break
+                  elif op_ic == 2:
+                    i_c.asignarFijacion_t(
+                        input("Ingrese el tipo de fijacion: "))
+                    break
+                  elif op_ic == 3:
+                    i_c.asignarTamaño(int(input("Ingrese el tamaño:")))
+                    break
+                  elif op_m == 4:
+                    i_c.asignarMedico(input("Ingrese el medico: "))
+                    break
+                  elif op_m == 5:
+                    i_c.asignarEstado(input("Ingrese el estado: ")) 
+                    break
+                  else:
+                    print("Ingrese una opcion valida")
+                    break
