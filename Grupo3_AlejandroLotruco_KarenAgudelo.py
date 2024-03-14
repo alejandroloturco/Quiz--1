@@ -735,6 +735,7 @@ def main():
                                     continue
                                 elif subopcion == 2 :
                                     break 
+            
             elif opcion == 7:
               print("Ha salido del sistema")
               break
@@ -746,3 +747,6 @@ def main():
     else:
       print("Opcion no valida, ingrese de nuevo")
       continue
+
+if __name__ == "__main__":
+  main()
