@@ -87,3 +87,20 @@ class StendCoronario(Implantes):
     self.__longitud = l
   def asignarDiametro(self, d):
     self.__diametro = d
+
+class ImplanteDental(Implantes):
+
+  def __init__(self, forma, fijacion_s, material,medico,estado):
+    super().__init__(material, None, medico, estado,None)
+    self.__forma = forma
+    self.__fijacion_s = fijacion_s
+
+  def verForma(self):
+    return self.__forma
+  def verFijacion_s(self):
+    return self.__fijacion_s
+
+  def asignarForma(self, f):
+    self.__forma = f
+  def asignarFijacion_s(self, f):
+    self.__fijacion_s = f
