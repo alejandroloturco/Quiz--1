@@ -610,3 +610,52 @@ def main():
                                 print(f'{key}: {n}')
                         print("")
                         continue
+                    
+            elif opcion == 5:
+              selec = int(
+              input("""Tipo de Implante:
+                                \r1. Marcapasos 
+                                \r2. Stend Coronario
+                                \r3. Implante Dental
+                                \r4. Implante Rodilla
+                                \r5. Implante Cadera
+                    \rIngrese una opcion:"""))
+            if selec == 1:
+              for mar in inventario[patient]:
+                if isinstance(mar, Marcapasos):
+                  sis2 = mar.verRevision()
+                  fecha_revision = (f'{datetime.datetime.now().strftime("%d/%m/%Y")}')
+                  mantenimiento = input("Ingrese la revision realizada al implante: ")
+                  mar.asignarRevision(sis2,fecha_revision,mantenimiento)
+            elif selec == 2:
+              for ste in inventario[patient]:
+                if isinstance(ste, StendCoronario):
+                  sis2 = ste.verRevision()
+                  ste.verRevision()
+                  fecha_revision = datetime.datetime.now().strftime("%d/%m/%Y")
+                  mantenimiento = input("Ingrese la revision realizada al implante: ")
+                  ste.asignarRevision(sis2,fecha_revision,mantenimiento)
+            elif selec == 3:
+              for impd in inventario[patient]:
+                if isinstance(impd, ImplanteDental):
+                  sis2 = impd.verRevision()
+                  impd.verRevision()
+                  fecha_revision = datetime.datetime.now().strftime("%d/%m/%Y")
+                  mantenimiento = input("Ingrese la revision realizada al impdlante: ")
+                  impd.asignarRevision(sis2,fecha_revision,mantenimiento)
+            elif selec == 4:
+              for impr in inventario[patient]:
+                if isinstance(impr, ImplanteRodilla):
+                  sis2 = impr.verRevision()
+                  impr.verRevision()
+                  fecha_revision = datetime.datetime.now().strftime("%d/%m/%Y")
+                  mantenimiento = input("Ingrese la revision realizada al implante: ")
+                  impr.asignarRevision(sis2,fecha_revision,mantenimiento)
+            elif selec == 5:
+              for ic in inventario[patient]:
+                if isinstance(ic, ImplanteCadera):
+                  sis2 = ic.verRevision()
+                  ic.verRevision()
+                  fecha_revision = datetime.datetime.now().strftime("%d/%m/%Y")
+                  mantenimiento = input("Ingrese la revision realizada al implante: ")
+                  ic.asignarRevision(sis2,fecha_revision,mantenimiento)
