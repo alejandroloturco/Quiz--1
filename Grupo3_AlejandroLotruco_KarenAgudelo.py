@@ -188,3 +188,20 @@ def main():
       pac_new = Paciente(nombre, cc)
       sis.ingresarPaciente(pac_new)
       print(" Paciente Ingresado\n")
+
+    elif menu == 2:
+      name = input("Ingrese el nombre del paciente: ")
+      doc = input("Ingrese el documento del paciente: ")
+      inventario = sis.verInventario()
+      for patient in sis.verInventario().keys():        
+        if patient.verNombre().lower() == name.lower() and patient.verCedula() == int(doc):
+          opcion = int(
+              input("""Escoja una opcion 
+                                        \r1. Agregar nuevos implantes 
+                                        \r2. Eliminar implantes
+                                        \r3. Editar informacion de implantes 
+                                        \r4. Visualizar inventario completo
+                                        \r5. Revision
+                                        \r6. Mantenimiento
+                                        \r7. Salir
+                                        \rIngrese--> """))
