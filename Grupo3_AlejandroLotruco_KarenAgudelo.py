@@ -397,8 +397,8 @@ def main():
                     \r5. Implante Cadera""")
                 s_opcion = int(input("Seleccione el implante a editar:"))
                 if s_opcion == 1:
-                    for stend in inventario[patient]:
-                        if isinstance(stend, StendCoronario):
+                    for mar in inventario[patient]:
+                        if isinstance(mar, Marcapasos):
                             print("""Seleccione la informacion de a editar:
                                 \r1. Electrodos
                                 \r2. Conectividad    
