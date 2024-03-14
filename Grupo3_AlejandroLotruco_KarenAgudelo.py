@@ -214,100 +214,177 @@ def main():
                                     \r4. Implante Rodilla
                                     \r5. Implante Cadera""")
                     opcion_f = int(input("Seleccione el tipo de protesis que desea agregar: "))
-
-                    if opcion_f == 1:                            
-                      
-                      elec = input("Ingrese la cantidad de electrodos: ")
-                      conec = input("Ingrese la conectividad: ")
-                      frec = input("Ingrese la frecuencia: ")
-                      med = input("Ingrese el medico: ")
-                      est = input("Ingrese el estado: ")
-                      mar = Marcapasos(elec, conec, frec,med,est)
-                      sis.agregarImplantes(patient, mar)
-                      subopcion = int(input("""Desea ingresar otro implante 
-                                            \r1. Si 
-                                            \r2. No 
-                                            \rIngrese su opcion: """))
-                      if subopcion == 1:
-                        continue
-                      elif subopcion == 2 :
-                        break                     
+                    if opcion_f == 1:                          
+                        elec = input("Ingrese la cantidad de electrodos: ")
+                        conec = input("Ingrese la conectividad: ")
+                        frec = input("Ingrese la frecuencia: ")
+                        med = input("Ingrese el medico: ")
+                        est = input("Ingrese el estado: ")
+                        mar = Marcapasos(elec, conec, frec,med,est)
+                        sis.agregarImplantes(patient, mar)
+                        subopcion = int(input("""Desea ingresar otro implante 
+                                                \r1. Si 
+                                                \r2. No 
+                                                \rIngrese su opcion: """))
+                        if subopcion == 1:
+                            continue
+                        elif subopcion == 2 :
+                            break                     
                 
                     elif opcion_f == 2:                                
-                      mat = input("Ingrese el material: ")
-                      long = input("Ingrese la longitud: ")
-                      diam = input("Ingrese el diametro: ")
-                      med = input("Ingrese el medico: ")
-                      est = input("Ingrese el estado: ")
-                      stend = StendCoronario(mat, long, diam,med,est)
-                      sis.agregarImplantes(patient, stend)
-                      print("Protesis agregada correctamente ")
-                      sis.agregarImplantes(patient, mar)  
-                      subopcion = int(input("""Desea ingresar otro implante 
-                                              \r1. Si 
-                                              \r2. No 
-                                              \rIngrese su opcion: """))
-                      if subopcion == 1:
-                          continue
-                      elif subopcion == 2 :
-                          break
+                        mat = input("Ingrese el material: ")
+                        long = input("Ingrese la longitud: ")
+                        diam = input("Ingrese el diametro: ")
+                        med = input("Ingrese el medico: ")
+                        est = input("Ingrese el estado: ")
+                        stend = StendCoronario(mat, long, diam,med,est)
+                        sis.agregarImplantes(patient, stend)
+                        print("Protesis agregada correctamente ")
+                        sis.agregarImplantes(patient, mar)  
+                        subopcion = int(input("""Desea ingresar otro implante 
+                                                \r1. Si 
+                                                \r2. No 
+                                                \rIngrese su opcion: """))
+                        if subopcion == 1:
+                            continue
+                        elif subopcion == 2 :
+                            break
                   
-                    elif opcion_f == 3:
-                                        
-                          form = input("Ingrese la forma: ")
-                          sf = input("Ingrese el sistema de fijacion: ")
-                          mat = input("Ingrese el material: ")
-                          med = input("Ingrese el medico: ")
-                          est = input("Ingrese el estado: ")
-                          im_dent = ImplanteDental(form, sf, mat,med,est)
-                          sis.agregarImplantes(patient, im_dent)
-                          print("Protesis agregada correctamente ")
-                          subopcion = int(input("""Desea ingresar otro implante 
-                                                  \r1. Si 
-                                                  \r2. No 
-                                                  \rIngrese su opcion: """))
-                          if subopcion == 1:
-                              continue
-                          elif subopcion == 2 :
-                              break
+                    elif opcion_f == 3:                                        
+                        form = input("Ingrese la forma: ")
+                        sf = input("Ingrese el sistema de fijacion: ")
+                        mat = input("Ingrese el material: ")
+                        med = input("Ingrese el medico: ")
+                        est = input("Ingrese el estado: ")
+                        im_dent = ImplanteDental(form, sf, mat,med,est)
+                        sis.agregarImplantes(patient, im_dent)
+                        print("Protesis agregada correctamente ")
+                        subopcion = int(input("""Desea ingresar otro implante 
+                                                \r1. Si 
+                                                \r2. No 
+                                                \rIngrese su opcion: """))
+                        if subopcion == 1:
+                            continue
+                        elif subopcion == 2 :
+                            break
                 
-                    elif opcion_f == 4:
-                                        
-                          mat = input("Ingrese el material: ")
-                          tf = input("Ingrese el tipo de fijacion: ")
-                          tam = input("Ingrese el tamaño: ")
-                          med = input("Ingrese el medico: ")
-                          est = input("Ingrese el estado: ")
-                          im_rod = ImplanteRodilla(mat, tf, tam,med,est)
-                          sis.agregarImplantes(patient, im_rod)
-                          print("Protesis agregada correctamente ")
-                          subopcion = int(input("""Desea ingresar otro implante 
-                                                  \r1. Si 
-                                                  \r2. No 
-                                                  \rIngrese su opcion: """))
-                          if subopcion == 1:
-                              continue
-                          elif subopcion == 2 :
-                              break
+                    elif opcion_f == 4:                                        
+                        mat = input("Ingrese el material: ")
+                        tf = input("Ingrese el tipo de fijacion: ")
+                        tam = input("Ingrese el tamaño: ")
+                        med = input("Ingrese el medico: ")
+                        est = input("Ingrese el estado: ")
+                        im_rod = ImplanteRodilla(mat, tf, tam,med,est)
+                        sis.agregarImplantes(patient, im_rod)
+                        print("Protesis agregada correctamente ")
+                        subopcion = int(input("""Desea ingresar otro implante 
+                                                \r1. Si 
+                                                \r2. No 
+                                                \rIngrese su opcion: """))
+                        if subopcion == 1:
+                            continue
+                        elif subopcion == 2 :
+                            break
                       
-                    elif opcion_f == 5:
-                                          
-                            mat = input("Ingrese el material: ")
-                            tf = input("Ingrese el tipo de fijacion: ")
-                            tam = input("Ingrese el tamaño: ")
-                            med = input("Ingrese el medico: ")
-                            est = input("Ingrese el estado: ")
-                            im_cad = ImplanteCadera(mat, tf, tam,med,est)
-                            sis.agregarImplantes(patient, im_cad)
-                            subopcion = int(input("""Desea ingresar otro implante 
-                                                    \r1. Si 
-                                                    \r2. No 
-                                                    \rIngrese su opcion: """))
-                            if subopcion == 1:
-                                continue
-                            elif subopcion == 2 :
-                                break
+                    elif opcion_f == 5:                                          
+                        mat = input("Ingrese el material: ")
+                        tf = input("Ingrese el tipo de fijacion: ")
+                        tam = input("Ingrese el tamaño: ")
+                        med = input("Ingrese el medico: ")
+                        est = input("Ingrese el estado: ")
+                        im_cad = ImplanteCadera(mat, tf, tam,med,est)
+                        sis.agregarImplantes(patient, im_cad)
+                        subopcion = int(input("""Desea ingresar otro implante 
+                                                \r1. Si 
+                                                \r2. No 
+                                                \rIngrese su opcion: """))
+                        if subopcion == 1:
+                            continue
+                        elif subopcion == 2 :
+                            break
                         
                     else:
                         print("Ingrese una opcion valida")
+
+            elif opcion == 2:
+                while True:
+                    print("""Protesis
+                        \r1. Marcapasos 
+                        \r2. Stend Coronario
+                        \r3. Implante Denal
+                        \r4. Implante Rodilla
+                        \r5. Implante Cadera""")
+                    opcion_f = int(input("Seleccione el tipo de protesis que desea eliminar: "))
+                    if opcion_f == 1:
+                        for implante in inventario[patient][:]:                  
+                            if isinstance(implante, Marcapasos):
+                                sis.eliminarImplantes(patient, implante)
+                                print("Marcapasos eliminado correctamente ")
+                        subopcion = int(input("""Desea eliminar otro implante 
+                                                        \r1. Si 
+                                                        \r2. No 
+                                                        \rIngrese su opcion: """))
+                        if subopcion == 1:
+                            continue
+                        elif subopcion == 2 :
+                            break
+                            
+                            
+                    elif opcion_f == 2:
+                        for implante in inventario[patient][:]:
+                            if isinstance(implante, StendCoronario):
+                                sis.eliminarImplantes(patient, implante)
+                                print("Stend coronario eliminado correctamente")
+                        subopcion = int(input("""Desea eliminar otro implante 
+                                                    \r1. Si 
+                                                    \r2. No 
+                                                    \rIngrese su opcion: """))
+                        if subopcion == 1:
+                            continue
+                        elif subopcion == 2 :
+                            break
+                    elif opcion_f == 3:
+                        for implante in inventario[patient][:]:                            
+                            if isinstance(implante, ImplanteDental):
+                                sis.eliminarImplantes(patient, implante)
+                                print("Implante dental eliminado correctamente")
+                        subopcion = int(input("""Desea eliminar otro implante 
+                                                    \r1. Si 
+                                                    \r2. No 
+                                                    \rIngrese su opcion: """))
+                        if subopcion == 1:
+                            continue
+                        elif subopcion == 2 :
+                            break
+
+                    elif opcion_f == 4:
+                        for implante in inventario[patient][:]:
+                            if isinstance(implante, ImplanteRodilla):
+                                sis.eliminarImplantes(patient, implante)
+                                print("Implante de rodilla eliminado correctamente")
+                        subopcion = int(input("""Desea eliminar otro implante 
+                                                    \r1. Si 
+                                                    \r2. No 
+                                                    \rIngrese su opcion: """))
+                        if subopcion == 1:
+                            continue
+                        elif subopcion == 2 :
+                            break
+
+                    elif opcion_f == 5:
+                        for implante in inventario[patient][:]:
+                            if isinstance(implante, ImplanteCadera):
+                                sis.eliminarImplantes(patient, implante)
+                                print("Implante de cadera eliminado correctamente")
+                        subopcion = int(input("""Desea eliminar otro implante 
+                                                    \r1. Si 
+                                                    \r2. No 
+                                                    \rIngrese su opcion: """))
+                        if subopcion == 1:
+                            continue
+                        elif subopcion == 2 :
+                            break
+                    else:
+                        print("Ingrese una opcion valida")
+                        break
 
