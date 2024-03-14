@@ -122,3 +122,18 @@ class ImplanteCadera(ImplanteRodilla):
 
   def __init__(self, material, fijacion_t, tamaño,medico,estado):
     super().__init__(material, fijacion_t, tamaño,medico,estado)
+
+class Paciente():
+  def __init__(self, nombre, cedula):
+    self.__nombre = nombre
+    self.__cedula = cedula
+
+  def verNombre(self):
+    return self.__nombre
+  def verCedula(self):
+    return self.__cedula
+
+  def asignarNombre(self, n):
+    self.__nombre = n
+  def asignarCedula(self, c):
+    self.__cedula = c
